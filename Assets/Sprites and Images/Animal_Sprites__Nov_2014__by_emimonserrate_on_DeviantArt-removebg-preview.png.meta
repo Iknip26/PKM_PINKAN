@@ -1,0 +1,343 @@
+fileFormatVersion: 2
+guid: 01b972387aa395242a62bc336c79e7c3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 320
+        width: 57
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcd85595e1a5f0a46b2199f7cf71c3ec
+      internalID: -1914755201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 320
+        width: 57
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d9dd4d25563df4c9c0bfc60a8c76c7
+      internalID: -835946369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 320
+        width: 76
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2748750d7886574fb0ec791857f3a8b
+      internalID: -1816833017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 186
+        width: 63
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86aeccb0d84dc248992db4448a1e6c6
+      internalID: -116338147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 186
+        width: 69
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99f55a7db88a4348bef95af1fa43526
+      internalID: 1747933328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 186
+        width: 79
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183e8785cba3bc349bbd0510120a828e
+      internalID: -1863546923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 43
+        width: 57
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92892ae46d893d4281cf61cb5221fc3
+      internalID: -1262898375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 46
+        width: 85
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb10bf9ad3f38a846ab91bae065281fd
+      internalID: 1863085311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 43
+        width: 72
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9edd7c6da7dbe9744a5eb7143ebfbd1e
+      internalID: 1758425080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 84
+        width: 60
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e22d6003277064aa7e9d45901335aa
+      internalID: 494875465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_7: 1863085311
+      Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_3: -116338147
+      Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_0: -1914755201
+      Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_6: -1262898375
+      Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_9: 494875465
+      Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_8: 1758425080
+      Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_1: -835946369
+      Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_5: -1863546923
+      Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_2: -1816833017
+      Animal_Sprites__Nov_2014__by_emimonserrate_on_DeviantArt-removebg-preview_4: 1747933328
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

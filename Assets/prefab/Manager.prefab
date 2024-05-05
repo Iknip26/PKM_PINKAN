@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5275790973453511957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5275790973453511959}
+  - component: {fileID: 5275790973453511958}
+  - component: {fileID: 5275790973453511952}
+  - component: {fileID: 5275790973453511953}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: gameManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5275790973453511959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5275790973453511957}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.29, y: 0.63, z: -0.059769865}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5275790973453511958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5275790973453511957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f763060920b0344686939f130c832c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  port: 5052
+  startRecieving: 1
+  printToConsole: 0
+  data: 
+--- !u!114 &5275790973453511952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5275790973453511957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa82c01e48066442838892ef6ad4e4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  udpReceive: {fileID: 5275790973453511958}
+  handPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tangan: {fileID: 0}
+  pos_X: 0
+  pos_Y: 0
+  prePos_X: 0
+  prePos_Y: 0
+  speed_X: 2
+  speed_Y: 2.5
+  pose: 
+  ikonTangan: {fileID: 0}
+  grab: {fileID: -2056375053, guid: ce155209f622edf4c8aa0de14ce7ea21, type: 3}
+  iddle: {fileID: -1170397072, guid: ce155209f622edf4c8aa0de14ce7ea21, type: 3}
+  thumbsup: {fileID: 0}
+  raycastTangan: {fileID: 0}
+  grabPos: {fileID: 0}
+  rayDistance: 10
+  isGrabbing: 0
+  ID_ITEM_DIPEGANG: 0
+--- !u!114 &5275790973453511953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5275790973453511957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754096086cac7674092de6ed2632d4f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objekBaru: {fileID: 6347992194045550937, guid: 47e518fbc1a674d4ca7ebde55e1c3889, type: 3}
+  tempatDrop: {fileID: 2223822447363129770, guid: fe56489f9ddc11a47b06187417a14828, type: 3}
+  txtLevel: {fileID: 0}
+  txtWaktu: {fileID: 0}
+  txtScore: {fileID: 0}
+  handTracking: {fileID: 0}
+  gambarTebakan: {fileID: 0}
+  arrayDataGame:
+  - gambar: {fileID: -1914755201, guid: 01b972387aa395242a62bc336c79e7c3, type: 3}
+    nama: KELINCI
+  - gambar: {fileID: -835946369, guid: 01b972387aa395242a62bc336c79e7c3, type: 3}
+    nama: BABI
+  - gambar: {fileID: -1816833017, guid: 01b972387aa395242a62bc336c79e7c3, type: 3}
+    nama: MONYET
+  - gambar: {fileID: -116338147, guid: 01b972387aa395242a62bc336c79e7c3, type: 3}
+    nama: KUCING
+  - gambar: {fileID: -1863546923, guid: 01b972387aa395242a62bc336c79e7c3, type: 3}
+    nama: KAMBING
+  - gambar: {fileID: -1262898375, guid: 01b972387aa395242a62bc336c79e7c3, type: 3}
+    nama: AYAM
+  - gambar: {fileID: 1863085311, guid: 01b972387aa395242a62bc336c79e7c3, type: 3}
+    nama: TIKUS
+  posSpawnX: -15.37
+  posSpawnY: 4.86
+  ukuranDefault: 0.5
+  syaratMenang: -10
+  apakahGameAktif: 1
+  dataLevel: 0
+  dataWaktu: 20
+  dataScore: 0
