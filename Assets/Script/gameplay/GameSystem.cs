@@ -16,6 +16,8 @@ public class GameSystem : MonoBehaviour
         public Sprite image;
         public string answer;
     }
+
+
     [Header("KOMPONEN, ASSET, DATA OBJEK, DAN LAIN LAIN")]
     [Space]
     public GameObject wordBox; public GameObject dropPlace; public GameObject guiPause; public GameObject guiLose;
@@ -64,9 +66,8 @@ public class GameSystem : MonoBehaviour
             tmpNewObject.SetActive(true);
            
 
-            // Set ATribut Objek Baru
+            // Set ATribut Objek Baru ( tampilan )
             tmpNewObject.transform.localScale = new Vector3(1.25f - 0.25f * pengaliUkuran, 1.25f - 0.25f * pengaliUkuran);
-            WordBox scriptObjekBaru = tmpNewObject.GetComponent<WordBox>();
             Canvas canvas = tmpNewObject.GetComponentInChildren<Canvas>();
             TextMeshProUGUI newWBIDTxt = canvas.GetComponentInChildren<TextMeshProUGUI>();
             newWBIDTxt.text = dataChoosenArray[ID_ITEM];
@@ -75,13 +76,13 @@ public class GameSystem : MonoBehaviour
             // GameObject gameManager = GameObject.FindWithTag("gameManager");
             // HandTracking handTracking = gameManager.GetComponent<HandTracking>();
 
-
+            // Set ATribut Objek Baru ( data )
+            WordBox scriptObjekBaru = tmpNewObject.GetComponent<WordBox>();
             scriptObjekBaru.handTracking = this.handTracking;
             scriptObjekBaru.ID_ITEM = ID_ITEM + 1;
             scriptObjekBaru.letterInBox = dataChoosenArray[ID_ITEM];
 
             wordBoxList.Add(tmpNewObject);
-            // print(wordBoxList)
         }
         else
         {
@@ -126,12 +127,7 @@ public class GameSystem : MonoBehaviour
         // txtLevel.text = gameLevel.ToString();
 
         slider.value = gameLevel;
-   
-
-        // int menit = UnityEngine.Mathf.FloorToInt(gameTime / 60);
-        // int detik = UnityEngine.Mathf.FloorToInt(gameTime % 60);
-
-        // txtTime.text = menit.ToString("00") + ":" + detik.ToString("00");
+        txtLevel.text = gameLevel.ToString();
 
     }
 
@@ -244,6 +240,8 @@ public class GameSystem : MonoBehaviour
             foreach(GameObject isi in dropPlaceList){
                 Destroy(isi);
             }
+            wordBoxList.Clear();
+            dropPlaceList.Clear();
             acakSoal();
             gameLevel++;
         }
