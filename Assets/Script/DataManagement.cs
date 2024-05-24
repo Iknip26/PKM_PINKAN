@@ -3,11 +3,22 @@ using System.Collections.Generic;
 using UnityEngine.Networking;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using System;
 
 public class DataManagement : MonoBehaviour
 {
 
-    public static string tmpGameMode="", tmpLevel="";
+    public static string tmpGameMode="", tmpLevel="A-C";
+
+    public static List<string> arraySoal = new List<string>();
+
+     static DataManagement()
+    {
+        arraySoal.Add("A");
+        arraySoal.Add("B");
+        arraySoal.Add("B");
+    }
+
     public static IEnumerator UpdateData(string uri, int id_data, int score)
     {
         print("KENAAAAAAAAAAA");

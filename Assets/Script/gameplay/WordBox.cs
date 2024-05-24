@@ -16,9 +16,6 @@ public class WordBox : MonoBehaviour
     public string letterInBox;
 
 
-
-
-
     void Start()
     {
         startPos = transform.position;

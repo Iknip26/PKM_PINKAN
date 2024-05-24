@@ -9,6 +9,7 @@ public class AudioBox : MonoBehaviour
     public HandTracking handTracking;
     private GameSystem2 gameSystem;
     private BoxCollider2D boxCol;
+    private GameObject handGameObj;
 
 
     IEnumerator playAudio(){
@@ -26,11 +27,10 @@ public class AudioBox : MonoBehaviour
     void Update()
     {
       if(gameSystem.isGameActive){
-          if (inHandArea && handTracking.pose=="grab")
+        if (inHandArea && handTracking.pose=="grab")
         {
             StartCoroutine(playAudio());
         }
-
       }
 
     }

@@ -11,9 +11,11 @@ public class HandTracking : MonoBehaviour
     public GameObject[] handPoints;
     public GameObject tangan;
 
+    public GameObject itemGrabbed;
+
     [HideInInspector]public float pos_X, pos_Y, prePos_X=0, prePos_Y=0;
 
-    [HideInInspector]public float speed_X, speed_Y;
+    [HideInInspector]public float speed_X = 1, speed_Y = 1 ;
 
     private int poseCounter = 0;
     [HideInInspector]public string pose = "iddle";
@@ -37,6 +39,16 @@ public class HandTracking : MonoBehaviour
     {
         layerObjects = LayerMask.NameToLayer("Objects");
         tangan = GameObject.FindWithTag("tangan");
+        // udpReceive = UDPReceive.Instance;
+
+        // if (udpReceive.isRunning)
+        // {
+        //     Debug.Log("UDPReceive is running.");
+        // }
+        // else
+        // {
+        //     Debug.Log("UDPReceive is not running.");
+        // }
     }
 
     // Update is called once per frame
@@ -47,16 +59,14 @@ public class HandTracking : MonoBehaviour
         data = data.Remove(data.Length - 1, 1);
         // print(data);
         string[] points = data.Split(',');
-        // print(points[0]);
-
-        //0        1*3      2*3
-        //x1,y1,z1,x2,y2,z2,x3,y3,z3
 
         for (int i = 0; i < 21; i++)
         {
 
             pos_X = (5 - float.Parse(points[i * 3]) / 100);
             pos_Y = ((float.Parse(points[i * 3 + 1]) / 100));
+            // print(pos_X + "= POS X");
+            // print(pos_Y + "= POS Y");
 
             if (i == 0)
             {
@@ -70,6 +80,9 @@ public class HandTracking : MonoBehaviour
 
             prePos_X = pos_X;
             prePos_Y = pos_Y;
+
+            // print(prePos_X);
+            // print(prePos_Y);
 
 
             handPoints[i].transform.localPosition = new Vector2(pos_X, pos_Y);
@@ -92,43 +105,6 @@ public class HandTracking : MonoBehaviour
             ikonTangan.sprite = grab;
             // print("grab");
         }
-
-
-        // RaycastHit2D itemDetectionInfo = Physics2D.Raycast(raycastTangan.position, transform.right, rayDistance);
-
-        // if (itemDetectionInfo.collider != null)
-        // {
-        //     if (itemDetectionInfo.collider.gameObject.layer == layerObjects)
-        //     {
-        //         BoxCollider2D colliderObject = itemDetectionInfo.collider as BoxCollider2D;
-
-        //         if (pose == "grab")
-        //         {
-        //             objectGrabbed = itemDetectionInfo.collider.gameObject;
-        //             isGrabbing = true;
-        //             if(!isObjColliderResized){
-        //                 Vector2 newSize = new Vector2(colliderObject.size.x + 20f, colliderObject.size.y + 20f);
-        //                 colliderObject.size = newSize;
-        //                 isObjColliderResized = true;
-        //             }
-                   
-        //             itemDetectionInfo.collider.gameObject.transform.position = grabPos.position;
-        //             itemDetectionInfo.collider.gameObject.transform.SetParent(transform);
-        //         }
-
-        //         else if (pose == "iddle")
-        //         {
-        //             objectGrabbed = null;
-        //             isGrabbing = false;
-        //             if(isObjColliderResized){
-        //                 Vector2 newSize = new Vector2(colliderObject.size.x - 20f, colliderObject.size.y - 20f);
-        //                 colliderObject.size = newSize;
-        //                 isObjColliderResized = false;
-        //             }
-        //             itemDetectionInfo.collider.gameObject.transform.SetParent(null);
-        //         }
-        //     }
-        // }
 
     }
 

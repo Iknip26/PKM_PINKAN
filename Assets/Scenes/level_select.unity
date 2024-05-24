@@ -209,14 +209,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1283946888}
         m_TargetAssemblyTypeName: gameModeSelect, Assembly-CSharp
-        m_MethodName: gantiMode
+        m_MethodName: gantiLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 1
+          m_StringArgument: U-Z
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &50021274
@@ -630,14 +630,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1283946888}
         m_TargetAssemblyTypeName: gameModeSelect, Assembly-CSharp
-        m_MethodName: gantiMode
+        m_MethodName: gantiLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 1
+          m_StringArgument: K-O
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &232284706
@@ -1254,14 +1254,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1283946888}
         m_TargetAssemblyTypeName: gameModeSelect, Assembly-CSharp
-        m_MethodName: gantiMode
+        m_MethodName: gantiLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 1
+          m_StringArgument: F-J
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &698096798
@@ -1555,7 +1555,6 @@ GameObject:
   - component: {fileID: 1283946886}
   - component: {fileID: 1283946885}
   - component: {fileID: 1283946884}
-  - component: {fileID: 1283946887}
   - component: {fileID: 1283946888}
   m_Layer: 0
   m_Name: EventSystem
@@ -1614,18 +1613,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1283946887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283946883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eef2afac1114774aa67d4b1c1b7945d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1283946888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1638,6 +1625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac772d9ff8d9cc6459ed6a5a8f263327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txtGameModeNow: {fileID: 0}
 --- !u!1 &1305972776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,14 +1712,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1283946888}
         m_TargetAssemblyTypeName: gameModeSelect, Assembly-CSharp
-        m_MethodName: gantiMode
+        m_MethodName: gantiLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 1
+          m_StringArgument: A-E
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1305972779
@@ -2404,14 +2392,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1283946888}
         m_TargetAssemblyTypeName: gameModeSelect, Assembly-CSharp
-        m_MethodName: gantiMode
+        m_MethodName: gantiLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 1
+          m_StringArgument: P-T
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1877679076

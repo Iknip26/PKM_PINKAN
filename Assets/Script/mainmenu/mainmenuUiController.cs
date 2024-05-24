@@ -9,11 +9,11 @@ public class mainmenuUiController : MonoBehaviour
 {
     public static Process process;
     // Start is called before the first frame update
-    public TextMeshProUGUI txtHighscore;
+    // public TextMeshProUGUI txtHighscore;
 
-    private ScoreData[] dataHighscore;
+    // private ScoreData[] dataHighscore;
 
-    public void playGame(){
+    public void startScript(){
         if (process == null)
         {
             string pythonScriptPath = "Assets/Script/tes.py";
@@ -37,9 +37,12 @@ public class mainmenuUiController : MonoBehaviour
                 print("Error starting Python script: " + e.Message);
             }
         }
-
-        SceneManager.LoadScene("Level");
     }
+
+    public void btnPindah(string nama){
+        SceneManager.LoadSceneAsync(nama);
+    }
+
 
     public void exitGame(){
         if (process != null && !process.HasExited)
@@ -54,8 +57,8 @@ public class mainmenuUiController : MonoBehaviour
     }
 
     void Start(){
-        StartCoroutine(DataManagement.GetRequest("http://localhost/PKM/getDataScore.php", dataHighscore));
-        print(dataHighscore);
+        startScript();
+        // StartCoroutine(DataManagement.GetRequest("http://localhost/PKM/getDataScore.php", dataHighscore));
         // txtHighscore.text = "Highscore : " + dataHighscore[0].data[0].score;
     }
 

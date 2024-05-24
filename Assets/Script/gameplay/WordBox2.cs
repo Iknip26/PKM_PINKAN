@@ -14,10 +14,6 @@ public class WordBox2 : MonoBehaviour
     public string letterInBox;
     public bool Cooldown = false;
 
-
-
-
-
     void Start()
     {
         startPos = transform.position;

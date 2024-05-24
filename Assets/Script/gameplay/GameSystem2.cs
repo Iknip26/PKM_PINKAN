@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+// using System.Numerics;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,8 +20,8 @@ public class GameSystem2 : MonoBehaviour
 
     [Header("KOMPONEN, ASSET, DATA OBJEK, DAN LAIN LAIN")]
     [Space]
-    public GameObject wordBox; public GameObject wordBox_2; public GameObject guiPause; public GameObject guiLose;
-    public TextMeshProUGUI txtLevel, txtTime, txtScore, txtTimeout;
+    public GameObject gameObjStage1; public GameObject gameObjStage2; public GameObject gameObjStage3; public GameObject wordBox; public GameObject wordBox_2; public GameObject guiPause; public GameObject guiWin;
+    public TextMeshProUGUI txtSlider, txtScore, txtLevelTittle;
     public HandTracking handTracking;
     public AudioSource guessAudio;
     public List<GameObject> wordBoxList = new List<GameObject>();
@@ -39,8 +41,9 @@ public class GameSystem2 : MonoBehaviour
     public bool isGameActive = true;
     public bool isGameEnded = false;
     private questionData dataChoosen;
-    public int gameLevel = 0, gameTime = 0, gameScore = 0;
-    public static GameSystem2 instance;  
+    public int gamePhase = 1, gameStage = 3, gameScore = 0, tmpSlider = 0;
+    public static GameSystem2 instance;
+
 
 
     private void Awake() {
@@ -48,18 +51,16 @@ public class GameSystem2 : MonoBehaviour
     }
 
     void setInfoUi(){
-        // txtTime.text = (gameTime + 1).ToString();
-        // txtScore.text = gameScore.ToString();
-        // txtLevel.text = gameLevel.ToString();
-
-        slider.value = gameLevel;
-        txtLevel.text = gameLevel.ToString();
-
+        txtSlider.text = tmpSlider.ToString();
+        slider.value = tmpSlider;
+        txtScore.text = gameScore.ToString();
+        // print(tmpSlider);
     }
 
     public void setAudio(){
         guessAudio.clip = dataChoosen.audio;
     }
+
 
     public void setWordBox(int randomizer){
         Canvas canvas;
@@ -92,14 +93,13 @@ public class GameSystem2 : MonoBehaviour
         TextMeshProUGUI newWBIDTxt2 = canvas2.GetComponentInChildren<TextMeshProUGUI>();
         newWBIDTxt2.text = randomAlphabet.ToString();
 
-       
     }
 
     void acakSoal()
     {
         if (questionDataList.Count > 0) // Pastikan list tidak kosong
         {
-             scriptWordBox.Cooldown = true;
+            scriptWordBox.Cooldown = true;
             int randomIndex = UnityEngine.Random.Range(0, questionDataList.Count);
             dataChoosen = questionDataList[randomIndex];
             print(dataChoosen.answer);
@@ -145,35 +145,87 @@ public class GameSystem2 : MonoBehaviour
         scriptWordBox.Cooldown = false;
     }
 
-    void Start()
-    {
-        scriptWordBox = wordBox.GetComponent<WordBox2>();
-        scriptWordBox2 = wordBox_2.GetComponent<WordBox2>();
+    public void initStage(int stage){
+        if(stage == 1){
+            gameObjStage1.SetActive(true);
+        }else if(stage == 2){
+            gameObjStage2.SetActive(true);
+        }else{
+            gameObjStage3.SetActive(true);
+        }
+    }
+
+    public void playGame1(){
+       
+    }
+
+    public void playGame2(){
+
+    }
+
+    public void playGame3(){
         acakSoal();
         StartCoroutine(playAudioWithDelay(1));
         StartCoroutine(gameDelay(3));
+    }
+
+    void Start()
+    {
+        initStage(gameStage);
+        // print(DataManagement.tmpLevel);
+        txtLevelTittle.text = DataManagement.tmpLevel.ToString();
+        scriptWordBox = wordBox.GetComponent<WordBox2>();
+        scriptWordBox2 = wordBox_2.GetComponent<WordBox2>();
+        playGame3();
     }
     void Update()
     {
         setInfoUi();
 
-        if(isGameActive){
-            if (gameTime > 0)
-            {
-                tmpWaktu += Time.deltaTime;
-                if(tmpWaktu>=1){
-                    gameTime--;
-                    tmpWaktu = 0;
+        if(gamePhase<=3){
+            if(gameStage==1){
+                if(winCondition == true){
+                    winCondition = false;
+                    playGame1();
+                    gamePhase++;
+                    gameScore+=20;
+                    tmpSlider++;
+                    StartCoroutine(gameDelay(3));
+                }
+
+            }else if(gameStage==2){
+                if(winCondition == true){
+                    winCondition = false;
+                    playGame2();
+                    gamePhase++;
+                    gameScore+=20;
+                    tmpSlider++;
+                    StartCoroutine(gameDelay(3));
+                }
+            }else if(gameStage==3){
+                if(winCondition == true){
+                    winCondition = false;
+                    playGame3();
+                    gamePhase++;
+                    gameScore+=20;
+                    tmpSlider++;
+                    StartCoroutine(gameDelay(3));
                 }
             }
+
+        }else{
+            gameStage++;
+            initStage(gameStage);
         }
 
-        if(winCondition == true){
-            winCondition = false;
-            acakSoal();
-            playAudio();
-            gameLevel++;
-            StartCoroutine(gameDelay(3));
+        if(gameStage>3){
+            isGameEnded = true;
         }
+
+        if(isGameEnded){
+            isGameActive = false;
+            guiWin.SetActive(true);
+        }
+
     }
 }
